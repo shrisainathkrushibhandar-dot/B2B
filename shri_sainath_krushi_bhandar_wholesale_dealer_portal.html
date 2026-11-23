@@ -1,0 +1,2792 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="emerald-gold">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>श्री साईनाथ कृषी भांडार | होलसेल कृषी निविष्ठा वितरण केंद्र, महाळुंग</title>
+  <meta name="description" content="श्री साईनाथ कृषी भांडार — प्रमुख कृषी निविष्ठा होलसेल वितरक व मुख्य गोदाम, कुबेर नर्सरी, गट नं. २, अकलूज-टेंभुर्णी रोड, महाळुंग, ता. माळशिरस, जि. सोलापूर - ४१३११२." />
+  <style>
+    /* ===================================================================== */
+    /* 1. DESIGN TOKENS & 3 EXECUTIVE B2B COLOR THEMES (ZERO EXTERNAL CDNs)  */
+    /* ===================================================================== */
+    :root,
+    [data-theme="emerald-gold"] {
+      --primary-deep: #042f2e;
+      --primary: #065f46;
+      --primary-mid: #0d9488;
+      --primary-soft: #ecfdf5;
+      --accent: #d97706;
+      --accent-bright: #fbbf24;
+      --accent-soft: #fef3c7;
+      --wa-green: #15803d;
+      --bg-page: #f6faf8;
+      --bg-surface: #ffffff;
+      --bg-subtle: #edf5f2;
+      --border: #d4e3de;
+      --border-strong: #afc8c0;
+      --text-main: #0c2420;
+      --text-muted: #49635e;
+      --shadow-sm: 0 2px 10px rgba(4, 47, 46, 0.06);
+      --shadow-md: 0 12px 28px rgba(4, 47, 46, 0.09);
+      --shadow-lg: 0 22px 46px rgba(4, 47, 46, 0.15);
+    }
+
+    [data-theme="indigo-gold"] {
+      --primary-deep: #131c42;
+      --primary: #1e3a8a;
+      --primary-mid: #2563eb;
+      --primary-soft: #eff6ff;
+      --accent: #d97706;
+      --accent-bright: #facc15;
+      --accent-soft: #fef9c3;
+      --wa-green: #15803d;
+      --bg-page: #f6f8fc;
+      --bg-surface: #ffffff;
+      --bg-subtle: #ebeef8;
+      --border: #d7dfef;
+      --border-strong: #b4c3e0;
+      --text-main: #131b36;
+      --text-muted: #4b5778;
+      --shadow-sm: 0 2px 10px rgba(19, 28, 66, 0.06);
+      --shadow-md: 0 12px 28px rgba(19, 28, 66, 0.09);
+      --shadow-lg: 0 22px 46px rgba(19, 28, 66, 0.15);
+    }
+
+    [data-theme="forest-copper"] {
+      --primary-deep: #142819;
+      --primary: #1f4729;
+      --primary-mid: #2e663b;
+      --primary-soft: #eef7f0;
+      --accent: #c2591a;
+      --accent-bright: #f97316;
+      --accent-soft: #ffedd5;
+      --wa-green: #15803d;
+      --bg-page: #f8f7f3;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f1ede4;
+      --border: #e1d9ca;
+      --border-strong: #c8bca6;
+      --text-main: #18231a;
+      --text-muted: #566358;
+      --shadow-sm: 0 2px 10px rgba(20, 40, 25, 0.06);
+      --shadow-md: 0 12px 28px rgba(20, 40, 25, 0.09);
+      --shadow-lg: 0 22px 46px rgba(20, 40, 25, 0.15);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Devanagari", "Mukta", Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.5;
+      padding-bottom: 82px;
+      background-color: var(--bg-page);
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    button, input, select {
+      font-family: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ===================================================================== */
+    /* 2. GLASSMORPHIC STICKY HEADER                                         */
+    /* ===================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1.5px solid var(--border);
+      box-shadow: 0 4px 18px rgba(4, 47, 46, 0.06);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      min-height: 68px;
+      padding: 8px 0;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .crest-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      background: linear-gradient(145deg, var(--primary-deep), var(--primary-mid));
+      border: 1.5px solid var(--accent-bright);
+      box-shadow: 0 6px 16px rgba(4, 47, 46, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary-deep);
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-shrink: 0;
+    }
+
+    .theme-dots {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+    }
+
+    .theme-dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+      transition: transform 0.18s ease;
+    }
+
+    .theme-dot:hover {
+      transform: scale(1.15);
+    }
+
+    .theme-dot.active {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+
+    .lang-btn {
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      color: var(--primary-deep);
+      font-size: 12px;
+      font-weight: 800;
+      min-height: 36px;
+      transition: background 0.18s ease;
+    }
+
+    .lang-btn:hover {
+      background: var(--bg-subtle);
+    }
+
+    .order-header-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+      color: #ffffff;
+      font-size: 12.5px;
+      font-weight: 800;
+      min-height: 38px;
+      box-shadow: 0 4px 12px rgba(4, 47, 46, 0.2);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .order-header-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(4, 47, 46, 0.28);
+    }
+
+    .order-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 21px;
+      height: 21px;
+      padding: 0 6px;
+      border-radius: 999px;
+      background: var(--accent-bright);
+      color: #0f172a;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    @media (max-width: 520px) {
+      .brand-sub {
+        display: none;
+      }
+      .order-header-btn {
+        padding: 7px 11px;
+        font-size: 11.5px;
+      }
+    }
+
+    /* ===================================================================== */
+    /* 3. ATMOSPHERIC EDITORIAL B2B HERO BANNER                              */
+    /* ===================================================================== */
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 86% 16%, rgba(251, 191, 36, 0.26) 0%, transparent 44%),
+        radial-gradient(circle at 14% 86%, rgba(245, 158, 11, 0.14) 0%, transparent 48%),
+        linear-gradient(135deg, var(--primary-deep) 0%, var(--primary) 54%, var(--primary-mid) 100%);
+      color: #ffffff;
+      padding: 44px 0 50px;
+      border-bottom: 2px solid rgba(251, 191, 36, 0.35);
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+      background-image: radial-gradient(#fbbf24 1.2px, transparent 1.2px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1.32fr 0.88fr;
+      }
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.42);
+      color: #fde68a;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: clamp(23px, 3.8vw, 35px);
+      font-weight: 800;
+      line-height: 1.24;
+      letter-spacing: -0.015em;
+    }
+
+    .hero-title span {
+      color: #fcd34d;
+    }
+
+    .hero-desc {
+      font-size: 14.5px;
+      color: rgba(255, 255, 255, 0.89);
+      margin-top: 10px;
+      max-width: 620px;
+      line-height: 1.6;
+    }
+
+    .hero-trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .trust-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.94);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent-bright), var(--accent));
+      color: #0f172a;
+      font-size: 14px;
+      font-weight: 800;
+      min-height: 44px;
+      box-shadow: 0 8px 22px rgba(217, 119, 6, 0.36);
+      transition: transform 0.18s ease, filter 0.18s ease;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.06);
+    }
+
+    .btn-glass {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      color: #ffffff;
+      font-size: 13.5px;
+      font-weight: 800;
+      min-height: 44px;
+      backdrop-filter: blur(8px);
+      transition: background 0.18s ease;
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .hero-visual-card {
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+      border: 1px solid rgba(251, 191, 36, 0.36);
+      border-radius: 22px;
+      padding: 22px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .hub-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      margin-bottom: 12px;
+    }
+
+    .hub-tag {
+      font-size: 12px;
+      font-weight: 800;
+      color: #fde68a;
+      letter-spacing: 0.02em;
+    }
+
+    .hub-route-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .route-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    /* ===================================================================== */
+    /* 4. STUDIO-ILLUSTRATED WHOLESALE STOCK CATALOG                         */
+    /* ===================================================================== */
+    .catalog-section {
+      padding: 36px 0 38px;
+    }
+
+    .catalog-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .title-group {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .section-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--primary-deep);
+    }
+
+    .sync-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sync-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #9ca3af;
+    }
+
+    .sync-dot.live {
+      background: #16a34a;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+    }
+
+    .sync-dot.syncing {
+      background: #f59e0b;
+    }
+
+    .refresh-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      border: 1px solid var(--border);
+      color: var(--primary-deep);
+      font-size: 11.5px;
+      font-weight: 800;
+      min-height: 30px;
+      transition: background 0.18s ease;
+    }
+
+    .refresh-pill:hover {
+      background: var(--accent-soft);
+    }
+
+    .search-box {
+      position: relative;
+      width: 100%;
+      max-width: 310px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 15px 10px 38px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      font-size: 13.5px;
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+      outline: none;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-soft);
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .filter-pill {
+      padding: 8px 15px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      color: var(--text-main);
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.18s ease;
+    }
+
+    .filter-pill:hover {
+      background: var(--bg-subtle);
+      transform: translateY(-1px);
+    }
+
+    .filter-pill.active {
+      background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+      border-color: var(--primary-deep);
+      color: #ffffff;
+      box-shadow: 0 6px 14px rgba(4, 47, 46, 0.18);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    @media (min-width: 620px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 960px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .product-card {
+      position: relative;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg), 0 0 0 1px rgba(245, 158, 11, 0.28);
+      border-color: var(--accent-bright);
+    }
+
+    .card-art-stage {
+      position: relative;
+      height: 146px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .card-art-stage::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 75%;
+      height: 100%;
+      background: linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.65) 50%, transparent 80%);
+      transform: skewX(-20deg);
+      transition: left 0.65s ease;
+      pointer-events: none;
+    }
+
+    .product-card:hover .card-art-stage::after {
+      left: 145%;
+    }
+
+    .stage-fertilizers {
+      background: radial-gradient(circle at 50% 35%, #bbf7d0 0%, #ecfdf5 62%, #faf8f3 100%);
+    }
+
+    .stage-seeds {
+      background: radial-gradient(circle at 50% 35%, #fde68a 0%, #fffbeb 62%, #faf8f3 100%);
+    }
+
+    .stage-crop_protection {
+      background: radial-gradient(circle at 50% 35%, #bfdbfe 0%, #eff6ff 62%, #faf8f3 100%);
+    }
+
+    .stage-micronutrients {
+      background: radial-gradient(circle at 50% 35%, #f5d0fe 0%, #fdf4ff 62%, #faf8f3 100%);
+    }
+
+    .art-top-badges {
+      position: absolute;
+      top: 11px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      z-index: 2;
+    }
+
+    .cat-pill-tag {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      color: var(--primary-deep);
+      font-size: 11px;
+      font-weight: 800;
+      backdrop-filter: blur(4px);
+    }
+
+    .avail-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    .avail-pill.in {
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #86efac;
+    }
+
+    .avail-pill.out {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fcd34d;
+    }
+
+    .glow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .packaging-svg {
+      width: 82px;
+      height: 82px;
+      margin-top: 18px;
+      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.14));
+      transition: transform 0.25s ease;
+    }
+
+    .product-card:hover .packaging-svg {
+      transform: scale(1.06);
+    }
+
+    .product-photo {
+      width: 96px;
+      height: 96px;
+      margin-top: 18px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 2px solid #ffffff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.14);
+      transition: transform 0.25s ease;
+    }
+
+    .product-card:hover .product-photo {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 16px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      gap: 14px;
+    }
+
+    .prod-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary-deep);
+      line-height: 1.32;
+    }
+
+    .prod-subtitle {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .trade-rate-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #92400e;
+      font-size: 11.5px;
+      font-weight: 800;
+      width: fit-content;
+    }
+
+    .card-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .primary-action-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-add-item {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      border: 1px solid var(--border);
+      color: var(--primary-deep);
+      font-size: 13px;
+      font-weight: 800;
+      min-height: 40px;
+      transition: all 0.18s ease;
+    }
+
+    .btn-add-item:hover:not(:disabled) {
+      background: var(--primary-deep);
+      border-color: var(--primary-deep);
+      color: #ffffff;
+    }
+
+    .btn-add-item:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .inline-stepper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 6px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+      color: #ffffff;
+      min-height: 40px;
+      box-shadow: 0 4px 12px rgba(4, 47, 46, 0.18);
+    }
+
+    .step-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s ease;
+    }
+
+    .step-circle:hover {
+      background: var(--accent-bright);
+      color: #0f172a;
+    }
+
+    .step-label {
+      font-size: 13px;
+      font-weight: 800;
+      padding: 0 6px;
+    }
+
+    .bulk-chips-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .bulk-chip {
+      padding: 6px 8px;
+      border-radius: 999px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--primary-deep);
+      font-size: 11.5px;
+      font-weight: 800;
+      text-align: center;
+      min-height: 32px;
+      transition: all 0.15s ease;
+    }
+
+    .bulk-chip:hover:not(:disabled) {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .bulk-chip:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* ===================================================================== */
+    /* 5. SUB-DEALER ONBOARDING & BULK QUOTE ENQUIRY SECTION                 */
+    /* ===================================================================== */
+    .onboarding-section {
+      padding: 0 0 38px;
+    }
+
+    .onboarding-card {
+      background: linear-gradient(135deg, var(--bg-surface) 0%, var(--primary-soft) 100%);
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      padding: 26px 24px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    @media (min-width: 880px) {
+      .onboarding-card {
+        grid-template-columns: 1.05fr 1.15fr;
+      }
+    }
+
+    .pillar-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .pillar-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary-deep);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quote-form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (min-width: 560px) {
+      .quote-form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .quote-full {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* ===================================================================== */
+    /* 6. TWO-COLUMN WAREHOUSE & EMBEDDED MAP CARD FOOTER                    */
+    /* ===================================================================== */
+    .footer-section {
+      padding: 6px 0 42px;
+    }
+
+    .store-map-card {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg), 0 0 0 1px rgba(245, 158, 11, 0.14);
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 860px) {
+      .store-map-card {
+        grid-template-columns: 1.05fr 0.95fr;
+      }
+    }
+
+    .store-info-col {
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-page) 100%);
+    }
+
+    .store-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 13px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(217, 119, 6, 0.3);
+      color: #92400e;
+      font-size: 11.5px;
+      font-weight: 800;
+      width: fit-content;
+    }
+
+    .store-heading {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary-deep);
+      margin-top: 8px;
+    }
+
+    .store-detail-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      font-size: 13.5px;
+      color: var(--text-main);
+    }
+
+    .detail-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--bg-subtle);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 15px;
+    }
+
+    .store-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-call-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      min-height: 42px;
+      box-shadow: 0 4px 12px rgba(4, 47, 46, 0.2);
+    }
+
+    .btn-wa-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: var(--wa-green);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      min-height: 42px;
+      box-shadow: 0 4px 12px rgba(21, 128, 61, 0.22);
+    }
+
+    .btn-directions {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-strong);
+      color: var(--primary-deep);
+      font-size: 13px;
+      font-weight: 800;
+      min-height: 42px;
+    }
+
+    .store-map-col {
+      position: relative;
+      min-height: 270px;
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (min-width: 860px) {
+      .store-map-col {
+        border-top: none;
+        border-left: 1px solid var(--border);
+      }
+    }
+
+    .map-iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 270px;
+      border: 0;
+      display: block;
+    }
+
+    .footer-bottom-note {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 20px;
+    }
+
+    /* ===================================================================== */
+    /* 7. SLIDE-OVER B2B PURCHASE ORDER DRAWER & NON-BLOCKING TOAST          */
+    /* ===================================================================== */
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background: rgba(4, 47, 46, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .drawer-panel {
+      width: 100%;
+      max-width: 450px;
+      height: 100%;
+      background: var(--bg-surface);
+      display: flex;
+      flex-direction: column;
+      box-shadow: -12px 0 36px rgba(0, 0, 0, 0.25);
+    }
+
+    .drawer-head {
+      padding: 16px 20px;
+      background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .drawer-close-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 20px;
+    }
+
+    .po-item-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      margin-bottom: 10px;
+    }
+
+    .po-qty-controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      flex-shrink: 0;
+    }
+
+    .po-step-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--primary-deep);
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .po-qty-input {
+      width: 48px;
+      height: 28px;
+      text-align: center;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary-deep);
+    }
+
+    .po-del-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #fee2e2;
+      color: #991b1b;
+      font-size: 12px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 2px;
+    }
+
+    .drawer-foot {
+      padding: 14px 20px 18px;
+      border-top: 1px solid var(--border);
+      background: var(--bg-page);
+      display: grid;
+      gap: 8px;
+    }
+
+    .po-field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .po-input {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      font-size: 13px;
+      color: var(--text-main);
+      outline: none;
+    }
+
+    .po-input:focus {
+      border-color: var(--primary);
+    }
+
+    .btn-send-po {
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--wa-green);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 800;
+      min-height: 44px;
+      box-shadow: 0 6px 16px rgba(21, 128, 61, 0.25);
+    }
+
+    .drawer-secondary-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .btn-copy-po,
+    .btn-clear-po {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .floating-cart-pill {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 45;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      border: 1px solid rgba(251, 191, 36, 0.45);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+    }
+
+    .bottom-toast {
+      position: fixed;
+      left: 50%;
+      bottom: 72px;
+      transform: translateX(-50%);
+      z-index: 50;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      background: #0c2420;
+      color: #ffffff;
+      font-size: 12.5px;
+      font-weight: 700;
+      white-space: nowrap;
+      max-width: calc(100vw - 24px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    .toast-open-btn {
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: var(--accent-bright);
+      color: #0f172a;
+      font-size: 11.5px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===================================================================== -->
+  <!-- 1. GLASSMORPHIC STICKY HEADER                                         -->
+  <!-- ===================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-link">
+        <div class="crest-badge" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+            <defs>
+              <linearGradient id="headerCrestGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fde68a" />
+                <stop offset="50%" stop-color="#f59e0b" />
+                <stop offset="100%" stop-color="#b45309" />
+              </linearGradient>
+            </defs>
+            <path d="M16 28V12" stroke="url(#headerCrestGold)" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M16 17C16 11 10.5 7.5 6.5 9C6.5 14 10 17 16 17Z" fill="url(#headerCrestGold)" />
+            <path d="M16 20C16 14 21.5 10.5 25.5 12C25.5 17 22 20 16 20Z" fill="url(#headerCrestGold)" />
+            <circle cx="16" cy="7.5" r="2.5" fill="#fde68a" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name" data-i18n="brandName">श्री साईनाथ कृषी भांडार</div>
+          <div class="brand-sub" data-i18n="brandSub">होलसेल कृषी निविष्ठा वितरण केंद्र • महाळुंग</div>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="theme-dots" aria-label="B2B Theme Switcher">
+          <button type="button" class="theme-dot active" style="background:#042f2e;" data-action="set-theme" data-theme-val="emerald-gold" title="Deep Royal Emerald & Harvest Gold"></button>
+          <button type="button" class="theme-dot" style="background:#1e3a8a;" data-action="set-theme" data-theme-val="indigo-gold" title="Royal Indigo & Saffron Gold"></button>
+          <button type="button" class="theme-dot" style="background:#142819;" data-action="set-theme" data-theme-val="forest-copper" title="Deep Forest & Copper Marigold"></button>
+        </div>
+        <button type="button" id="lang-btn" class="lang-btn" data-action="toggle-lang">EN</button>
+        <button type="button" class="order-header-btn" data-action="open-drawer">
+          <span data-i18n="orderListBtn">होलसेल मागणी यादी</span>
+          <span id="header-badge" class="order-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- 2. ATMOSPHERIC EDITORIAL B2B HERO BANNER                              -->
+  <!-- ===================================================================== -->
+  <main id="top">
+    <section class="hero-section">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-pill">
+            <span data-i18n="heroBadge">📍 महाळुंग, ता. माळशिरस • केवळ B2B होलसेल वितरण केंद्र</span>
+          </div>
+          <h1 class="hero-title" data-i18n="heroTitle">
+            कृषी सेवा केंद्रे, FPC व सहकारी संस्थांसाठी <span>अधिकृत होलसेल</span> पुरवठा
+          </h1>
+          <p class="hero-desc" data-i18n="heroDesc">
+            प्रमुख कंपन्यांची सीलबंद खते, संकरित बियाणे, पीक संरक्षण औषधे व सूक्ष्म अन्नद्रव्ये — केवळ परवानाधारक विक्रेत्यांसाठी पारदर्शक व्यापारी दर व जलद डिस्पॅच सुविधेसह.
+          </p>
+
+          <div class="hero-trust-strip">
+            <span class="trust-chip" data-i18n="trust1">✓ १००% कंपनी सीलबंद माल</span>
+            <span class="trust-chip" data-i18n="trust2">✓ GST व e-Way Bill तयार</span>
+            <span class="trust-chip" data-i18n="trust3">✓ केवळ B2B बल्क डिस्पॅच</span>
+          </div>
+
+          <div class="hero-cta-row">
+            <a href="#catalog" class="btn-gold" data-i18n="heroCtaStock">होलसेल स्टॉक पहा</a>
+            <a
+              href="https://wa.me/919096779722?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B8%E0%A4%BE%E0%A4%88%E0%A4%A8%E0%A4%BE%E0%A4%A5%20%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A5%80%20%E0%A4%AD%E0%A4%BE%E0%A4%82%E0%A4%A1%E0%A4%BE%E0%A4%B0%2C%20%E0%A4%AE%E0%A4%B2%E0%A4%BE%20B2B%20%E0%A4%B9%E0%A5%8B%E0%A4%B2%E0%A4%B8%E0%A5%87%E0%A4%B2%20%E0%A4%A6%E0%A4%B0%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%95%20%E0%A4%B9%E0%A4%B5%E0%A5%87%20%E0%A4%86%E0%A4%B9%E0%A5%87."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-glass"
+              data-i18n="heroCtaWa"
+            >💬 B2B WhatsApp संपर्क</a>
+          </div>
+        </div>
+
+        <div class="hero-visual-card">
+          <div class="hub-badge-row">
+            <span class="hub-tag" data-i18n="hubTag">मुख्य होलसेल वेअरहाऊस • महाळुंग</span>
+            <span style="font-size:12px;font-weight:800;color:#86efac;" data-i18n="hubActive">● डिस्पॅच सुरू</span>
+          </div>
+          <p style="font-size:13.5px;color:rgba(255,255,255,0.92);line-height:1.55;" data-i18n="hubSummary">
+            सोलापूर, पुणे, सातारा व अहिल्यानगर जिल्ह्यांतील अधिकृत कृषी सेवा केंद्रांसाठी नियमित टेम्पो व ट्रक डिस्पॅच सेवा:
+          </p>
+          <div class="hub-route-list">
+            <span class="route-pill">महाळुंग</span>
+            <span class="route-pill">अकलूज</span>
+            <span class="route-pill">माळशिरस</span>
+            <span class="route-pill">इंदापूर</span>
+            <span class="route-pill">बारामती</span>
+            <span class="route-pill">पंढरपूर</span>
+            <span class="route-pill">सांगोला</span>
+            <span class="route-pill">फलटण</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 3. STUDIO-ILLUSTRATED WHOLESALE STOCK CATALOG                       -->
+    <!-- =================================================================== -->
+    <section id="catalog" class="catalog-section">
+      <div class="container">
+        <div class="catalog-header">
+          <div class="title-group">
+            <h2 class="section-title" data-i18n="catalogTitle">उपलब्ध होलसेल साठा</h2>
+            <span class="sync-badge">
+              <span id="sync-dot" class="sync-dot"></span>
+              <span id="sync-label">वेअरहाऊस साठा</span>
+            </span>
+            <button type="button" class="refresh-pill" data-action="refresh-sheet">
+              <span>↻</span>
+              <span data-i18n="refreshBtn">रिफ्रेश</span>
+            </button>
+          </div>
+
+          <div class="search-box">
+            <svg class="search-icon" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+            </svg>
+            <input type="text" id="search-input" class="search-input" placeholder="उत्पादन किंवा कंपनी शोधा..." />
+          </div>
+        </div>
+
+        <div class="filter-bar">
+          <button type="button" class="filter-pill active" data-action="filter-cat" data-cat="all" data-i18n="catAll">सर्व</button>
+          <button type="button" class="filter-pill" data-action="filter-cat" data-cat="fertilizers" data-i18n="catFertilizers">खते</button>
+          <button type="button" class="filter-pill" data-action="filter-cat" data-cat="seeds" data-i18n="catSeeds">संकरित बियाणे</button>
+          <button type="button" class="filter-pill" data-action="filter-cat" data-cat="crop_protection" data-i18n="catProtection">पीक संरक्षण</button>
+          <button type="button" class="filter-pill" data-action="filter-cat" data-cat="micronutrients" data-i18n="catMicro">सूक्ष्म अन्नद्रव्ये</button>
+        </div>
+
+        <div id="products-grid" class="products-grid"></div>
+
+        <div id="empty-state" class="hidden" style="text-align:center;padding:40px 16px;">
+          <p style="font-size:15px;font-weight:700;color:var(--text-muted);" data-i18n="emptyText">शोधलेले उत्पादन यादीत सापडले नाही.</p>
+          <button type="button" class="filter-pill active" style="margin-top:12px;" data-action="reset-filters" data-i18n="resetBtn">सर्व उत्पादने पहा</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 4. SUB-DEALER ONBOARDING & BULK QUOTE ENQUIRY                       -->
+    <!-- =================================================================== -->
+    <section id="onboarding" class="onboarding-section">
+      <div class="container">
+        <div class="onboarding-card">
+          <div>
+            <span class="store-eyebrow" data-i18n="onboardBadge">🤝 नवीन सब-डीलर व FPC नोंदणी</span>
+            <h2 class="store-heading" data-i18n="onboardTitle">नवीन कृषी सेवा केंद्र होलसेल खाते व दरपत्रक चौकशी</h2>
+            <p style="font-size:13.5px;color:var(--text-muted);margin-top:8px;" data-i18n="onboardDesc">
+              तुमच्या दुकानासाठी किंवा शेतकरी उत्पादक कंपनीसाठी (FPC) नियमित होलसेल पुरवठा व व्यापारी दरपत्रक मिळवण्यासाठी खालील माहिती थेट WhatsApp वर पाठवा.
+            </p>
+            <div class="pillar-list">
+              <div class="pillar-item" data-i18n="pillar1">📦 सीलबंद लॉट पुरवठा</div>
+              <div class="pillar-item" data-i18n="pillar2">🧾 पक्के GST इनव्हॉइस</div>
+              <div class="pillar-item" data-i18n="pillar3">🚛 वेळेवर टेम्पो डिस्पॅच</div>
+              <div class="pillar-item" data-i18n="pillar4">🏷️ स्पर्धात्मक डीलर दर</div>
+            </div>
+          </div>
+
+          <div class="quote-form-grid">
+            <input type="text" id="ob-firm" class="po-input" placeholder="कृषी सेवा केंद्र / फर्मचे नाव" />
+            <input type="text" id="ob-owner" class="po-input" placeholder="मालकाचे नाव व मोबाईल नं." />
+            <input type="text" id="ob-location" class="po-input" placeholder="गाव / तालुका / जिल्हा" />
+            <input type="text" id="ob-license" class="po-input" placeholder="GSTIN / कृषी परवाना क्र. (ऐच्छिक)" />
+            <input type="text" id="ob-req" class="po-input quote-full" placeholder="आवश्यक उत्पादने (उदा. युरिया, डीएपी, बियाणे, औषधे)" />
+            <button type="button" class="btn-send-po quote-full" data-action="send-onboarding" data-i18n="onboardBtn">
+              💬 होलसेल दरपत्रक व नोंदणी पाठवा
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- 5. ATTRACTIVE TWO-COLUMN WAREHOUSE & MAP CARD FOOTER                  -->
+  <!-- ===================================================================== -->
+  <footer id="contact" class="footer-section">
+    <div class="container">
+      <div class="store-map-card">
+        <div class="store-info-col">
+          <div>
+            <span class="store-eyebrow" data-i18n="storeEyebrow">📍 मुख्य होलसेल वेअरहाऊस व वितरण केंद्र</span>
+            <h2 class="store-heading" data-i18n="brandName">श्री साईनाथ कृषी भांडार</h2>
+
+            <div class="store-detail-list">
+              <div class="detail-item">
+                <div class="detail-icon" aria-hidden="true">🏢</div>
+                <div data-i18n="storeAddress">
+                  कुबेर नर्सरी, गट नं. २, अकलूज-टेंभुर्णी रोड, महाळुंग, ता. माळशिरस, जि. सोलापूर - ४१३११२
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon" aria-hidden="true">🕒</div>
+                <div>
+                  <strong data-i18n="hoursLabel">होलसेल डिस्पॅच वेळ:</strong>
+                  <span data-i18n="storeHours">सकाळी ८:०० ते रात्री ८:३० (होलसेल डिस्पॅच वेळ)</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon" aria-hidden="true">📞</div>
+                <div>
+                  <strong data-i18n="phoneLabel">B2B होलसेल डेस्क:</strong>
+                  <a href="tel:+919096779722" style="font-weight:800;color:var(--primary);">+91 90967 79722</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="store-cta-group">
+            <a href="tel:+919096779722" class="btn-call-store" data-i18n="callBtn">📞 होलसेल डेस्क कॉल</a>
+            <a
+              href="https://wa.me/919096779722?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B8%E0%A4%BE%E0%A4%88%E0%A4%A8%E0%A4%BE%E0%A4%A5%20%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A5%80%20%E0%A4%AD%E0%A4%BE%E0%A4%82%E0%A4%A1%E0%A4%BE%E0%A4%B0%20(B2B%20%E0%A4%B9%E0%A5%8B%E0%A4%B2%E0%A4%B8%E0%A5%87%E0%A4%B2%20%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97)"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-wa-store"
+              data-i18n="waBtn"
+            >💬 B2B WhatsApp संपर्क</a>
+            <a
+              href="https://maps.app.goo.gl/DJa6MzcmTFemU5Fk9?g_st=ac"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-directions"
+              data-i18n="mapBtn"
+            >🗺️ वेअरहाऊस लोकेशन</a>
+          </div>
+        </div>
+
+        <div class="store-map-col">
+          <iframe
+            class="map-iframe"
+            title="Shri Sainath Krushi Bhandar Wholesale Distribution Hub Mahalung Map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Mahalung%20Malshiras%20Solapur%20413112&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
+      </div>
+
+      <p class="footer-bottom-note" data-i18n="copyright">
+        © २०२६ श्री साईनाथ कृषी भांडार, महाळुंग • केवळ B2B होलसेल कृषी निविष्ठा वितरण केंद्र
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- SLIDE-OVER B2B PURCHASE ORDER DRAWER (HIDDEN BY DEFAULT)              -->
+  <!-- ===================================================================== -->
+  <div id="order-drawer" class="drawer-backdrop hidden" data-action="backdrop-close">
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <div>
+          <strong style="font-size:16.5px;display:block;" data-i18n="drawerTitle">होलसेल मागणी यादी (B2B PO List)</strong>
+          <span style="font-size:11.5px;opacity:0.85;" data-i18n="drawerSub">व्यापारी दरासाठी WhatsApp वर B2B ऑर्डर पाठवा</span>
+        </div>
+        <button type="button" class="drawer-close-btn" data-action="close-drawer" aria-label="Close">✕</button>
+      </div>
+
+      <div id="drawer-items" class="drawer-body"></div>
+
+      <div class="drawer-foot">
+        <input type="text" id="po-dealer-name" class="po-input" placeholder="कृषी सेवा केंद्र / फर्मचे नाव" />
+        <div class="po-field-row">
+          <input type="text" id="po-village" class="po-input" placeholder="गाव / तालुका / जिल्हा" />
+          <input type="text" id="po-gst" class="po-input" placeholder="GSTIN / परवाना क्र. (ऐच्छिक)" />
+        </div>
+        <select id="po-delivery" class="po-input">
+          <option value="Self Pickup (स्वतः गोदामातून उचल)" data-i18n="delPickup">स्वतः गोदामातून उचल (Self Pickup)</option>
+          <option value="Tempo / Transport Dispatch (टेम्पो डिस्पॅच)" data-i18n="delTempo">टेम्पो / ट्रान्सपोर्ट डिस्पॅच (Tempo Dispatch)</option>
+        </select>
+        <button type="button" class="btn-send-po" data-action="send-whatsapp" data-i18n="sendPoBtn">
+          💬 WhatsApp वर B2B ऑर्डर पाठवा
+        </button>
+        <div class="drawer-secondary-actions">
+          <button type="button" class="btn-copy-po" data-action="copy-po" data-i18n="copyPoBtn">📋 यादी कॉपी करा</button>
+          <button type="button" class="btn-clear-po" data-action="clear-list" data-i18n="clearPoBtn">🗑️ यादी रिकामी करा</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING QUICK ORDER PILL & 2.5-SECOND NON-BLOCKING TOAST -->
+  <button type="button" id="floating-cart-pill" class="floating-cart-pill hidden" data-action="open-drawer">
+    <span>📦</span>
+    <span id="floating-pill-label">होलसेल मागणी यादी (0)</span>
+  </button>
+
+  <div id="bottom-toast" class="bottom-toast hidden" role="status" aria-live="polite">
+    <span id="toast-msg" style="overflow:hidden;text-overflow:ellipsis;">✓ होलसेल यादीत जोडले</span>
+    <button type="button" class="toast-open-btn" data-action="toast-open" data-i18n="toastViewBtn">यादी पहा</button>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- SELF-CONTAINED JAVASCRIPT (LIVE GOOGLE SHEET + SILENT BULK ORDERING)  -->
+  <!-- ===================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      const WHATSAPP_NUMBER = '919096779722';
+      const SHEET_ID = '1OldoW2opGfrUq5dsyud-lxYoH33QyZO2CDSdh3y7dCI';
+      const SHEET_TAB = 'Sheet1';
+      const CART_KEY = 'sskb_b2b_po_v4';
+      const LANG_KEY = 'sskb_b2b_lang_v4';
+      const THEME_KEY = 'sskb_b2b_theme_v4';
+
+      // Pre-populated core wholesale items from Sheet1 (Strictly no prices, no numeric stock counts)
+      const INITIAL_PRODUCTS = [
+        {
+          id: 'prod_urea_45kg',
+          category: 'fertilizers',
+          nameMr: 'इफ्को नीम कोटेड युरिया (45kg)',
+          nameEn: 'IFFCO Neem Coated Urea (45kg)',
+          imageUrl: '',
+          available: true
+        },
+        {
+          id: 'prod_dap_50kg',
+          category: 'fertilizers',
+          nameMr: 'डी.ए.पी. 18:46:0 कॉम्प्लेक्स (50kg)',
+          nameEn: 'DAP 18:46:0 Complex (50kg)',
+          imageUrl: '',
+          available: true
+        },
+        {
+          id: 'prod_mahyco_cotton',
+          category: 'seeds',
+          nameMr: 'महिको संकरित कापूस बियाणे (475g)',
+          nameEn: 'Mahyco Hybrid Cotton Seed (475g)',
+          imageUrl: '',
+          available: true
+        },
+        {
+          id: 'prod_amistar_200ml',
+          category: 'crop_protection',
+          nameMr: 'सिंजेंटा अमिसार टॉप (200ml)',
+          nameEn: 'Syngenta Amistar Top (200ml)',
+          imageUrl: '',
+          available: true
+        },
+        {
+          id: 'prod_roundup_1l',
+          category: 'crop_protection',
+          nameMr: 'बायर राउंडअप ग्लायफोसेट (1L)',
+          nameEn: 'Bayer Roundup Glyphosate (1L)',
+          imageUrl: '',
+          available: true
+        },
+        {
+          id: 'prod_zinc_500g',
+          category: 'micronutrients',
+          nameMr: 'चिलेटेड झिंक EDTA 12% (500g)',
+          nameEn: 'Chelated Zinc EDTA 12% (500g)',
+          imageUrl: '',
+          available: true
+        }
+      ];
+
+      const I18N = {
+        mr: {
+          brandName: 'श्री साईनाथ कृषी भांडार',
+          brandSub: 'होलसेल कृषी निविष्ठा वितरण केंद्र • महाळुंग',
+          orderListBtn: 'होलसेल मागणी यादी',
+          langToggle: 'EN',
+          heroBadge: '📍 महाळुंग, ता. माळशिरस • केवळ B2B होलसेल वितरण केंद्र',
+          heroTitle: 'कृषी सेवा केंद्रे, FPC व सहकारी संस्थांसाठी <span>अधिकृत होलसेल</span> पुरवठा',
+          heroDesc: 'प्रमुख कंपन्यांची सीलबंद खते, संकरित बियाणे, पीक संरक्षण औषधे व सूक्ष्म अन्नद्रव्ये — केवळ परवानाधारक विक्रेत्यांसाठी पारदर्शक व्यापारी दर व जलद डिस्पॅच सुविधेसह.',
+          trust1: '✓ १००% कंपनी सीलबंद माल',
+          trust2: '✓ GST व e-Way Bill तयार',
+          trust3: '✓ केवळ B2B बल्क डिस्पॅच',
+          heroCtaStock: 'होलसेल स्टॉक पहा',
+          heroCtaWa: '💬 B2B WhatsApp संपर्क',
+          hubTag: 'मुख्य होलसेल वेअरहाऊस • महाळुंग',
+          hubActive: '● डिस्पॅच सुरू',
+          hubSummary: 'सोलापूर, पुणे, सातारा व अहिल्यानगर जिल्ह्यांतील अधिकृत कृषी सेवा केंद्रांसाठी नियमित टेम्पो व ट्रक डिस्पॅच सेवा:',
+          catalogTitle: 'उपलब्ध होलसेल साठा',
+          refreshBtn: 'रिफ्रेश',
+          searchPlaceholder: 'उत्पादन किंवा कंपनी शोधा...',
+          catAll: 'सर्व',
+          catFertilizers: 'खते',
+          catSeeds: 'संकरित बियाणे',
+          catProtection: 'पीक संरक्षण',
+          catMicro: 'सूक्ष्म अन्नद्रव्ये',
+          emptyText: 'शोधलेले उत्पादन यादीत सापडले नाही.',
+          resetBtn: 'सर्व उत्पादने पहा',
+          availIn: 'होलसेल उपलब्ध',
+          availOut: 'सध्या अनुपलब्ध',
+          rateLabel: '🔒 व्यापारी दरासाठी संपर्क',
+          addBtn: '+ होलसेल यादीत जोडा',
+          unavailBtn: 'सध्या अनुपलब्ध',
+          unitShort: 'लॉट',
+          toastAdded: '✓ होलसेल यादीत जोडले',
+          toastCopied: '✓ होलसेल मागणी यादी कॉपी केली',
+          toastViewBtn: 'यादी पहा',
+          onboardBadge: '🤝 नवीन सब-डीलर व FPC नोंदणी',
+          onboardTitle: 'नवीन कृषी सेवा केंद्र होलसेल खाते व दरपत्रक चौकशी',
+          onboardDesc: 'तुमच्या दुकानासाठी किंवा शेतकरी उत्पादक कंपनीसाठी (FPC) नियमित होलसेल पुरवठा व व्यापारी दरपत्रक मिळवण्यासाठी खालील माहिती थेट WhatsApp वर पाठवा.',
+          pillar1: '📦 सीलबंद लॉट पुरवठा',
+          pillar2: '🧾 पक्के GST इनव्हॉइस',
+          pillar3: '🚛 वेळेवर टेम्पो डिस्पॅच',
+          pillar4: '🏷️ स्पर्धात्मक डीलर दर',
+          obFirmPlaceholder: 'कृषी सेवा केंद्र / फर्मचे नाव',
+          obOwnerPlaceholder: 'मालकाचे नाव व मोबाईल नं.',
+          obLocPlaceholder: 'गाव / तालुका / जिल्हा',
+          obLicPlaceholder: 'GSTIN / कृषी परवाना क्र. (ऐच्छिक)',
+          obReqPlaceholder: 'आवश्यक उत्पादने (उदा. युरिया, डीएपी, बियाणे, औषधे)',
+          onboardBtn: '💬 होलसेल दरपत्रक व नोंदणी पाठवा',
+          storeEyebrow: '📍 मुख्य होलसेल वेअरहाऊस व वितरण केंद्र',
+          storeAddress: 'कुबेर नर्सरी, गट नं. २, अकलूज-टेंभुर्णी रोड, महाळुंग, ता. माळशिरस, जि. सोलापूर - ४१३११२',
+          hoursLabel: 'होलसेल डिस्पॅच वेळ:',
+          storeHours: 'सकाळी ८:०० ते रात्री ८:३० (होलसेल डिस्पॅच वेळ)',
+          phoneLabel: 'B2B होलसेल डेस्क:',
+          callBtn: '📞 होलसेल डेस्क कॉल',
+          waBtn: '💬 B2B WhatsApp संपर्क',
+          mapBtn: '🗺️ वेअरहाऊस लोकेशन',
+          copyright: '© २०२६ श्री साईनाथ कृषी भांडार, महाळुंग • केवळ B2B होलसेल कृषी निविष्ठा वितरण केंद्र',
+          drawerTitle: 'होलसेल मागणी यादी (B2B PO List)',
+          drawerSub: 'व्यापारी दरासाठी WhatsApp वर B2B ऑर्डर पाठवा',
+          drawerEmpty: 'तुमची होलसेल मागणी यादी रिकामी आहे. उत्पादने निवडा.',
+          dealerPlaceholder: 'कृषी सेवा केंद्र / फर्मचे नाव',
+          villagePlaceholder: 'गाव / तालुका / जिल्हा',
+          gstPlaceholder: 'GSTIN / परवाना क्र. (ऐच्छिक)',
+          delPickup: 'स्वतः गोदामातून उचल (Self Pickup)',
+          delTempo: 'टेम्पो / ट्रान्सपोर्ट डिस्पॅच (Tempo Dispatch)',
+          sendPoBtn: '💬 WhatsApp वर B2B ऑर्डर पाठवा',
+          copyPoBtn: '📋 यादी कॉपी करा',
+          clearPoBtn: '🗑️ यादी रिकामी करा',
+          syncLive: 'थेट Google Sheet',
+          syncing: 'अपडेट होत आहे...',
+          syncReady: 'वेअरहाऊस साठा'
+        },
+        en: {
+          brandName: 'Shri Sainath Krushi Bhandar',
+          brandSub: 'B2B Wholesale Agri-Inputs Distribution Hub • Mahalung',
+          orderListBtn: 'B2B PO List',
+          langToggle: 'मराठी',
+          heroBadge: '📍 Mahalung, Tal. Malshiras • Strictly B2B Wholesale Hub',
+          heroTitle: 'Authorized <span>Wholesale Supply</span> for Krushi Seva Kendras, FPCs & Societies',
+          heroDesc: 'Company-sealed fertilizers, hybrid seeds, crop protection & micronutrients — exclusively for licensed sub-dealers with transparent trade rates and fast dispatch.',
+          trust1: '✓ 100% Company-Sealed Lots',
+          trust2: '✓ GST & e-Way Bill Ready',
+          trust3: '✓ Strictly B2B Bulk Dispatch',
+          heroCtaStock: 'View Wholesale Stock',
+          heroCtaWa: '💬 B2B WhatsApp Desk',
+          hubTag: 'Main Wholesale Warehouse • Mahalung',
+          hubActive: '● Dispatch Active',
+          hubSummary: 'Regular tempo & truck dispatch network serving authorized Krushi Seva Kendras across Solapur, Pune, Satara & Ahilyanagar:',
+          catalogTitle: 'Available Wholesale Stock',
+          refreshBtn: 'Refresh',
+          searchPlaceholder: 'Search product or brand...',
+          catAll: 'All',
+          catFertilizers: 'Fertilizers',
+          catSeeds: 'Hybrid Seeds',
+          catProtection: 'Crop Protection',
+          catMicro: 'Micronutrients',
+          emptyText: 'No matching wholesale products found.',
+          resetBtn: 'Show All Products',
+          availIn: 'Wholesale Available',
+          availOut: 'Currently Unavailable',
+          rateLabel: '🔒 Trade Rate on Request',
+          addBtn: '+ Add to Wholesale List',
+          unavailBtn: 'Currently Unavailable',
+          unitShort: 'Lots',
+          toastAdded: '✓ Added to Wholesale PO List',
+          toastCopied: '✓ B2B PO list copied',
+          toastViewBtn: 'View PO List',
+          onboardBadge: '🤝 New Sub-Dealer & FPC Onboarding',
+          onboardTitle: 'New Krushi Seva Kendra Wholesale Account & Rate Enquiry',
+          onboardDesc: 'Send your shop or Farmer Producer Company (FPC) details directly on WhatsApp for regular wholesale supply and trade rate sheets.',
+          pillar1: '📦 Sealed Lot Supply',
+          pillar2: '🧾 Valid GST Invoices',
+          pillar3: '🚛 Timely Tempo Dispatch',
+          pillar4: '🏷️ Competitive Dealer Rates',
+          obFirmPlaceholder: 'Krushi Seva Kendra / Firm Name',
+          obOwnerPlaceholder: 'Proprietor Name & Mobile No.',
+          obLocPlaceholder: 'Village / Taluka / District',
+          obLicPlaceholder: 'GSTIN / Agri License No. (Optional)',
+          obReqPlaceholder: 'Required Products (e.g. Urea, DAP, Seeds, Crop Protection)',
+          onboardBtn: '💬 Send Wholesale Rate & Registration Enquiry',
+          storeEyebrow: '📍 Main Wholesale Warehouse & Dispatch Hub',
+          storeAddress: 'Kuber Nursery, Gat No. 2, Akluj-Tembhurni Road, Mahalung, Tal. Malshiras, Dist. Solapur - 413112',
+          hoursLabel: 'Wholesale Dispatch Hours:',
+          storeHours: '8:00 AM to 8:30 PM (Wholesale Dispatch Hours)',
+          phoneLabel: 'B2B Wholesale Desk:',
+          callBtn: '📞 Call Wholesale Desk',
+          waBtn: '💬 B2B WhatsApp Desk',
+          mapBtn: '🗺️ Warehouse Location',
+          copyright: '© 2026 Shri Sainath Krushi Bhandar, Mahalung • B2B Wholesale Agri-Inputs Distribution Hub',
+          drawerTitle: 'Wholesale Purchase Order (B2B PO)',
+          drawerSub: 'Send B2B list on WhatsApp for trade rates & dispatch',
+          drawerEmpty: 'Your B2B PO list is empty. Add bulk items from the catalog.',
+          dealerPlaceholder: 'Krushi Seva Kendra / Firm Name',
+          villagePlaceholder: 'Village / Taluka / District',
+          gstPlaceholder: 'GSTIN / Agri License No. (Optional)',
+          delPickup: 'Self Pickup from Warehouse',
+          delTempo: 'Tempo / Transport Dispatch',
+          sendPoBtn: '💬 Send B2B Order on WhatsApp',
+          copyPoBtn: '📋 Copy PO List',
+          clearPoBtn: '🗑️ Clear List',
+          syncLive: 'Live Google Sheet',
+          syncing: 'Syncing...',
+          syncReady: 'Warehouse Stock'
+        }
+      };
+
+      let products = INITIAL_PRODUCTS.slice();
+      let lang = 'mr';
+      let theme = 'emerald-gold';
+      let activeCategory = 'all';
+      let searchQuery = '';
+      let syncState = 'ready';
+      let cart = {};
+      let toastTimer = null;
+
+      function getStorage(key, fallback) {
+        try {
+          const val = window.localStorage.getItem(key);
+          return val !== null ? val : fallback;
+        } catch (e) {
+          return fallback;
+        }
+      }
+
+      function setStorage(key, val) {
+        try {
+          window.localStorage.setItem(key, val);
+        } catch (e) {
+          // Ignore sandboxed storage limits
+        }
+      }
+
+      function loadState() {
+        const savedLang = getStorage(LANG_KEY, 'mr');
+        if (savedLang === 'mr' || savedLang === 'en') lang = savedLang;
+
+        const savedTheme = getStorage(THEME_KEY, 'emerald-gold');
+        if (['emerald-gold', 'indigo-gold', 'forest-copper'].includes(savedTheme)) theme = savedTheme;
+
+        try {
+          const parsed = JSON.parse(getStorage(CART_KEY, '{}'));
+          if (parsed && typeof parsed === 'object') cart = parsed;
+        } catch (e) {
+          cart = {};
+        }
+      }
+
+      function saveCart() {
+        setStorage(CART_KEY, JSON.stringify(cart));
+      }
+
+      function esc(str) {
+        return String(str || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function copyText(text) {
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        } catch (e) {
+          // Safe fallback
+        }
+      }
+
+      // =====================================================================
+      // UNIQUE-ID STUDIO PACKAGING SVG ILLUSTRATIONS (ZERO DUPLICATE ID BUGS)
+      // =====================================================================
+      function getPackagingSvg(category, uid) {
+        const g1 = 'grad1_' + uid;
+        const g2 = 'grad2_' + uid;
+        if (category === 'seeds') {
+          return (
+            '<svg class="packaging-svg" viewBox="0 0 96 96" fill="none" aria-hidden="true">' +
+            '<defs>' +
+            '<linearGradient id="' + g1 + '" x1="20" y1="10" x2="76" y2="86" gradientUnits="userSpaceOnUse">' +
+            '<stop offset="0%" stop-color="#fbbf24" /><stop offset="100%" stop-color="#d97706" />' +
+            '</linearGradient>' +
+            '</defs>' +
+            '<rect x="20" y="10" width="56" height="76" rx="8" fill="url(#' + g1 + ')" />' +
+            '<rect x="20" y="10" width="56" height="12" rx="4" fill="#92400e" />' +
+            '<rect x="26" y="28" width="44" height="44" rx="6" fill="#fffbeb" />' +
+            '<path d="M48 62V42" stroke="#15803d" stroke-width="3.2" stroke-linecap="round" />' +
+            '<path d="M48 50C48 42 40 38 35 40C35 47 40 50 48 50Z" fill="#16a34a" />' +
+            '<path d="M48 54C48 46 56 42 61 44C61 51 56 54 48 54Z" fill="#22c55e" />' +
+            '<rect x="30" y="65" width="36" height="4" rx="2" fill="#d97706" />' +
+            '</svg>'
+          );
+        }
+        if (category === 'crop_protection') {
+          return (
+            '<svg class="packaging-svg" viewBox="0 0 96 96" fill="none" aria-hidden="true">' +
+            '<defs>' +
+            '<linearGradient id="' + g1 + '" x1="26" y1="22" x2="70" y2="86" gradientUnits="userSpaceOnUse">' +
+            '<stop offset="0%" stop-color="#3b82f6" /><stop offset="100%" stop-color="#1d4ed8" />' +
+            '</linearGradient>' +
+            '</defs>' +
+            '<rect x="36" y="10" width="24" height="12" rx="4" fill="#1e3a8a" />' +
+            '<path d="M32 22H64L70 34V78C70 82.4 66.4 86 62 86H34C29.6 86 26 82.4 26 78V34L32 22Z" fill="url(#' + g1 + ')" />' +
+            '<rect x="30" y="40" width="36" height="32" rx="5" fill="#eff6ff" />' +
+            '<path d="M48 46L56 56C56 60.4 52.4 64 48 64C43.6 64 40 60.4 40 56L48 46Z" fill="#0284c7" />' +
+            '<rect x="36" y="67" width="24" height="3.5" rx="1.75" fill="#1d4ed8" />' +
+            '</svg>'
+          );
+        }
+        if (category === 'micronutrients') {
+          return (
+            '<svg class="packaging-svg" viewBox="0 0 96 96" fill="none" aria-hidden="true">' +
+            '<defs>' +
+            '<linearGradient id="' + g1 + '" x1="22" y1="24" x2="74" y2="84" gradientUnits="userSpaceOnUse">' +
+            '<stop offset="0%" stop-color="#a855f7" /><stop offset="100%" stop-color="#7e22ce" />' +
+            '</linearGradient>' +
+            '</defs>' +
+            '<rect x="26" y="12" width="44" height="12" rx="5" fill="#581c87" />' +
+            '<rect x="22" y="24" width="52" height="60" rx="10" fill="url(#' + g1 + ')" />' +
+            '<rect x="27" y="34" width="42" height="38" rx="6" fill="#faf5ff" />' +
+            '<polygon points="48,40 57,46 57,56 48,62 39,56 39,46" fill="#9333ea" />' +
+            '<circle cx="48" cy="51" r="4" fill="#fde047" />' +
+            '<rect x="33" y="65" width="30" height="3.5" rx="1.75" fill="#7e22ce" />' +
+            '</svg>'
+          );
+        }
+        return (
+          '<svg class="packaging-svg" viewBox="0 0 96 96" fill="none" aria-hidden="true">' +
+          '<defs>' +
+          '<linearGradient id="' + g1 + '" x1="20" y1="10" x2="76" y2="86" gradientUnits="userSpaceOnUse">' +
+          '<stop offset="0%" stop-color="#10b981" /><stop offset="100%" stop-color="#047857" />' +
+          '</linearGradient>' +
+          '<linearGradient id="' + g2 + '" x1="33" y1="61" x2="63" y2="65" gradientUnits="userSpaceOnUse">' +
+          '<stop offset="0%" stop-color="#059669" /><stop offset="100%" stop-color="#065f46" />' +
+          '</linearGradient>' +
+          '</defs>' +
+          '<path d="M24 16C24 12.7 26.7 10 30 10H66C69.3 10 72 12.7 72 16L76 80C76 83.3 73.3 86 70 86H26C22.7 86 20 83.3 20 80L24 16Z" fill="url(#' + g1 + ')" />' +
+          '<path d="M24 16H72" stroke="#064e3b" stroke-width="5" stroke-dasharray="4 3" />' +
+          '<rect x="27" y="28" width="42" height="44" rx="7" fill="#ffffff" />' +
+          '<circle cx="48" cy="46" r="11" fill="#d1fae5" />' +
+          '<path d="M48 53V39M48 44L42 40M48 47L54 43" stroke="#059669" stroke-width="2.6" stroke-linecap="round" />' +
+          '<rect x="33" y="61" width="30" height="4" rx="2" fill="url(#' + g2 + ')" />' +
+          '</svg>'
+        );
+      }
+
+      // =====================================================================
+      // BULLETPROOF GOOGLE SHEET LIVE SYNC (JSONP + CSV FALLBACK)
+      // =====================================================================
+      function normalizeDriveImage(rawUrl) {
+        const u = String(rawUrl || '').trim();
+        if (!u || !/^https?:\/\//i.test(u)) return '';
+        const match = u.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || u.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+        if (match && match[1]) {
+          return 'https://drive.google.com/thumbnail?id=' + match[1] + '&sz=w400';
+        }
+        return u;
+      }
+
+      function detectCategory(rawCat, name) {
+        const s = (String(rawCat || '') + ' ' + String(name || '')).toLowerCase();
+        if (s.includes('seed') || s.includes('cotton') || s.includes('mahyco') || s.includes('बियाणे')) return 'seeds';
+        if (
+          s.includes('protect') ||
+          s.includes('herbicide') ||
+          s.includes('fungicide') ||
+          s.includes('insecticide') ||
+          s.includes('amistar') ||
+          s.includes('roundup') ||
+          s.includes('syngenta') ||
+          s.includes('bayer') ||
+          s.includes('संरक्षण')
+        ) {
+          return 'crop_protection';
+        }
+        if (s.includes('micro') || s.includes('zinc') || s.includes('edta') || s.includes('boron') || s.includes('सूक्ष्म')) {
+          return 'micronutrients';
+        }
+        return 'fertilizers';
+      }
+
+      function detectAvailable(rawStock) {
+        if (rawStock === null || rawStock === undefined || String(rawStock).trim() === '') return true;
+        const v = String(rawStock).trim().toLowerCase();
+        if (/^\d+(\.\d+)?$/.test(v)) return parseFloat(v) > 0;
+        if (
+          v === '0' ||
+          v.includes('out') ||
+          v.includes('unavail') ||
+          v === 'no' ||
+          v === 'false' ||
+          v.includes('संपले') ||
+          v.includes('अनुपलब्ध')
+        ) {
+          return false;
+        }
+        return true;
+      }
+
+      function isNoiseRow(name) {
+        const low = String(name || '').trim().toLowerCase();
+        if (!low || low.length < 2) return true;
+        const skip = [
+          'item name',
+          'product name',
+          'product',
+          'name',
+          'xyz',
+          'test',
+          'demo',
+          'sample',
+          'aaa',
+          'asdf',
+          'xxx',
+          'na',
+          'n/a',
+          'null'
+        ];
+        return skip.includes(low);
+      }
+
+      function applySheetRows(rows) {
+        const parsed = [];
+        rows.forEach(function (cols, idx) {
+          const itemName = String(cols[0] || '').trim();
+          if (isNoiseRow(itemName)) return;
+
+          const rawCat = String(cols[1] || '').trim();
+          const rawMr = String(cols[2] || '').trim();
+          const rawImg = normalizeDriveImage(cols[3]);
+          const rawStock = cols[4];
+
+          const preset = INITIAL_PRODUCTS.find(function (p) {
+            return p.nameEn.toLowerCase() === itemName.toLowerCase();
+          });
+
+          parsed.push({
+            id: preset
+              ? preset.id
+              : 'sheet_' + idx + '_' + itemName.toLowerCase().replace(/[^a-z0-9]+/g, '_').slice(0, 22),
+            category: detectCategory(rawCat, itemName),
+            nameMr: rawMr || (preset ? preset.nameMr : itemName),
+            nameEn: itemName,
+            imageUrl: rawImg || (preset ? preset.imageUrl : ''),
+            available: detectAvailable(rawStock)
+          });
+        });
+
+        if (parsed.length > 0) {
+          products = parsed;
+          syncState = 'live';
+          updateSyncUI();
+          renderProducts();
+        }
+      }
+
+      function parseCsv(text) {
+        const lines = String(text || '').split(/\r?\n/);
+        const rows = [];
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i].trim();
+          if (!line) continue;
+          const cols = [];
+          let cur = '';
+          let inQuotes = false;
+          for (let j = 0; j < line.length; j++) {
+            const ch = line[j];
+            if (ch === '"') {
+              if (inQuotes && line[j + 1] === '"') {
+                cur += '"';
+                j++;
+              } else {
+                inQuotes = !inQuotes;
+              }
+            } else if (ch === ',' && !inQuotes) {
+              cols.push(cur);
+              cur = '';
+            } else {
+              cur += ch;
+            }
+          }
+          cols.push(cur);
+          rows.push(cols);
+        }
+        return rows;
+      }
+
+      function fetchCsvFallback() {
+        const url =
+          'https://docs.google.com/spreadsheets/d/' +
+          SHEET_ID +
+          '/gviz/tq?tqx=out:csv&sheet=' +
+          encodeURIComponent(SHEET_TAB) +
+          '&_=' +
+          Date.now();
+
+        if (typeof window.fetch !== 'function') {
+          syncState = 'ready';
+          updateSyncUI();
+          return;
+        }
+
+        window
+          .fetch(url)
+          .then(function (r) {
+            if (!r.ok) throw new Error('CSV fetch failed');
+            return r.text();
+          })
+          .then(function (txt) {
+            applySheetRows(parseCsv(txt));
+            if (syncState !== 'live') {
+              syncState = 'ready';
+              updateSyncUI();
+            }
+          })
+          .catch(function () {
+            syncState = 'ready';
+            updateSyncUI();
+          });
+      }
+
+      function syncSheet() {
+        syncState = 'syncing';
+        updateSyncUI();
+
+        const cbName = '__sskbB2bCb_' + Date.now() + '_' + Math.floor(Math.random() * 10000);
+        let finished = false;
+
+        const timer = window.setTimeout(function () {
+          if (!finished) {
+            finished = true;
+            cleanup();
+            fetchCsvFallback();
+          }
+        }, 3200);
+
+        function cleanup() {
+          try {
+            delete window[cbName];
+          } catch (e) {
+            window[cbName] = undefined;
+          }
+          const el = document.getElementById(cbName);
+          if (el && el.parentNode) el.parentNode.removeChild(el);
+        }
+
+        window[cbName] = function (res) {
+          if (finished) return;
+          finished = true;
+          window.clearTimeout(timer);
+          cleanup();
+
+          try {
+            if (res && res.table && Array.isArray(res.table.rows)) {
+              const rows = res.table.rows.map(function (r) {
+                const cells = Array.isArray(r.c) ? r.c : [];
+                return cells.map(function (c) {
+                  return c && c.v !== null && c.v !== undefined ? c.v : '';
+                });
+              });
+              applySheetRows(rows);
+              if (syncState !== 'live') {
+                syncState = 'ready';
+                updateSyncUI();
+              }
+            } else {
+              fetchCsvFallback();
+            }
+          } catch (e) {
+            fetchCsvFallback();
+          }
+        };
+
+        const script = document.createElement('script');
+        script.id = cbName;
+        script.async = true;
+        script.src =
+          'https://docs.google.com/spreadsheets/d/' +
+          SHEET_ID +
+          '/gviz/tq?sheet=' +
+          encodeURIComponent(SHEET_TAB) +
+          '&tqx=responseHandler:' +
+          cbName +
+          '&_=' +
+          Date.now();
+        script.onerror = function () {
+          if (!finished) {
+            finished = true;
+            window.clearTimeout(timer);
+            cleanup();
+            fetchCsvFallback();
+          }
+        };
+        document.body.appendChild(script);
+      }
+
+      function updateSyncUI() {
+        const dot = document.getElementById('sync-dot');
+        const label = document.getElementById('sync-label');
+        const d = I18N[lang];
+        if (!dot || !label) return;
+
+        dot.className = 'sync-dot';
+        if (syncState === 'live') {
+          dot.classList.add('live');
+          label.textContent = d.syncLive;
+        } else if (syncState === 'syncing') {
+          dot.classList.add('syncing');
+          label.textContent = d.syncing;
+        } else {
+          label.textContent = d.syncReady;
+        }
+      }
+
+      // =====================================================================
+      // RENDER PRODUCT CARDS (STRICTLY NO PRICES & NO NUMERIC STOCK COUNTS)
+      // =====================================================================
+      function getCategoryLabel(cat) {
+        const d = I18N[lang];
+        if (cat === 'seeds') return d.catSeeds;
+        if (cat === 'crop_protection') return d.catProtection;
+        if (cat === 'micronutrients') return d.catMicro;
+        return d.catFertilizers;
+      }
+
+      function renderProducts() {
+        const grid = document.getElementById('products-grid');
+        const empty = document.getElementById('empty-state');
+        if (!grid || !empty) return;
+
+        const d = I18N[lang];
+        const q = searchQuery.trim().toLowerCase();
+
+        const filtered = products.filter(function (p) {
+          if (activeCategory !== 'all' && p.category !== activeCategory) return false;
+          if (!q) return true;
+          return p.nameMr.toLowerCase().includes(q) || p.nameEn.toLowerCase().includes(q);
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '';
+          empty.classList.remove('hidden');
+          return;
+        }
+
+        empty.classList.add('hidden');
+
+        grid.innerHTML = filtered
+          .map(function (p, index) {
+            const title = lang === 'mr' ? p.nameMr : p.nameEn;
+            const sub = lang === 'mr' ? p.nameEn : p.nameMr;
+            const showSub = title.toLowerCase() !== sub.toLowerCase();
+            const qty = cart[p.id] ? cart[p.id].qty : 0;
+            const isAvail = p.available !== false;
+            const uniqueSvgId = p.id + '_' + index;
+
+            const availHtml = isAvail
+              ? '<span class="avail-pill in"><span class="glow-dot"></span>' + esc(d.availIn) + '</span>'
+              : '<span class="avail-pill out"><span class="glow-dot"></span>' + esc(d.availOut) + '</span>';
+
+            const visualHtml = p.imageUrl
+              ? '<img class="product-photo" src="' +
+                esc(p.imageUrl) +
+                '" alt="' +
+                esc(title) +
+                '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'block\';" />' +
+                '<div style="display:none;">' +
+                getPackagingSvg(p.category, uniqueSvgId) +
+                '</div>'
+              : getPackagingSvg(p.category, uniqueSvgId);
+
+            let primaryControl = '';
+            if (!isAvail) {
+              primaryControl = '<button type="button" class="btn-add-item" disabled>' + esc(d.unavailBtn) + '</button>';
+            } else if (qty > 0) {
+              primaryControl =
+                '<div class="inline-stepper">' +
+                '<button type="button" class="step-circle" data-action="step" data-id="' + esc(p.id) + '" data-delta="-1" aria-label="Decrease">−</button>' +
+                '<span class="step-label">' + qty + ' ' + esc(d.unitShort) + '</span>' +
+                '<button type="button" class="step-circle" data-action="step" data-id="' + esc(p.id) + '" data-delta="1" aria-label="Increase">+</button>' +
+                '</div>';
+            } else {
+              primaryControl =
+                '<button type="button" class="btn-add-item" data-action="add" data-id="' + esc(p.id) + '" data-qty="1">' +
+                esc(d.addBtn) +
+                '</button>';
+            }
+
+            const disAttr = isAvail ? '' : ' disabled';
+
+            return (
+              '<article class="product-card">' +
+              '<div class="card-art-stage stage-' + esc(p.category) + '">' +
+              '<div class="art-top-badges">' +
+              '<span class="cat-pill-tag">' + esc(getCategoryLabel(p.category)) + '</span>' +
+              availHtml +
+              '</div>' +
+              visualHtml +
+              '</div>' +
+              '<div class="card-body">' +
+              '<div>' +
+              '<h3 class="prod-title">' + esc(title) + '</h3>' +
+              (showSub ? '<div class="prod-subtitle">' + esc(sub) + '</div>' : '') +
+              '<div class="trade-rate-pill">' + esc(d.rateLabel) + '</div>' +
+              '</div>' +
+              '<div class="card-controls">' +
+              '<div class="primary-action-row">' +
+              primaryControl +
+              '</div>' +
+              '<div class="bulk-chips-row">' +
+              '<button type="button" class="bulk-chip" data-action="add" data-id="' + esc(p.id) + '" data-qty="10"' + disAttr + '>+10</button>' +
+              '<button type="button" class="bulk-chip" data-action="add" data-id="' + esc(p.id) + '" data-qty="25"' + disAttr + '>+25</button>' +
+              '<button type="button" class="bulk-chip" data-action="add" data-id="' + esc(p.id) + '" data-qty="50"' + disAttr + '>+50</button>' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '</article>'
+            );
+          })
+          .join('');
+      }
+
+      // =====================================================================
+      // SILENT BULK ORDERING, NON-BLOCKING TOAST & WHATSAPP B2B PO DISPATCH
+      // =====================================================================
+      function getUniqueItemCount() {
+        let count = 0;
+        Object.keys(cart).forEach(function (id) {
+          if (cart[id] && cart[id].qty > 0) count += 1;
+        });
+        return count;
+      }
+
+      function updateBadges() {
+        const count = getUniqueItemCount();
+        const headerBadge = document.getElementById('header-badge');
+        const floatPill = document.getElementById('floating-cart-pill');
+        const floatLabel = document.getElementById('floating-pill-label');
+
+        if (headerBadge) headerBadge.textContent = String(count);
+
+        if (floatPill && floatLabel) {
+          if (count > 0) {
+            floatPill.classList.remove('hidden');
+            floatLabel.textContent = (lang === 'mr' ? 'होलसेल मागणी यादी (' : 'B2B PO List (') + count + ')';
+          } else {
+            floatPill.classList.add('hidden');
+          }
+        }
+      }
+
+      function showToast(messageText) {
+        const toast = document.getElementById('bottom-toast');
+        const msg = document.getElementById('toast-msg');
+        if (!toast || !msg) return;
+
+        msg.textContent = messageText;
+        toast.classList.remove('hidden');
+
+        if (toastTimer) window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(function () {
+          toast.classList.add('hidden');
+        }, 2500);
+      }
+
+      function addItemSilent(id, qty) {
+        const prod = products.find(function (p) {
+          return p.id === id;
+        });
+        if (!prod || prod.available === false) return;
+
+        const addAmt = Math.max(1, parseInt(qty, 10) || 1);
+        if (!cart[id]) {
+          cart[id] = {
+            id: prod.id,
+            nameMr: prod.nameMr,
+            nameEn: prod.nameEn,
+            qty: 0
+          };
+        }
+        cart[id].qty += addAmt;
+
+        saveCart();
+        updateBadges();
+        renderProducts();
+        renderDrawer();
+
+        const itemLabel = lang === 'mr' ? prod.nameMr : prod.nameEn;
+        showToast(I18N[lang].toastAdded + ': ' + itemLabel + ' (+' + addAmt + ')');
+      }
+
+      function stepItem(id, delta) {
+        if (!cart[id]) return;
+        const next = cart[id].qty + delta;
+        if (next <= 0) {
+          delete cart[id];
+        } else {
+          cart[id].qty = next;
+        }
+        saveCart();
+        updateBadges();
+        renderProducts();
+        renderDrawer();
+      }
+
+      function setItemQty(id, rawVal) {
+        if (!cart[id]) return;
+        const parsed = parseInt(rawVal, 10);
+        if (isNaN(parsed) || parsed <= 0) {
+          delete cart[id];
+        } else {
+          cart[id].qty = parsed;
+        }
+        saveCart();
+        updateBadges();
+        renderProducts();
+        renderDrawer();
+      }
+
+      function removeItem(id) {
+        if (cart[id]) {
+          delete cart[id];
+          saveCart();
+          updateBadges();
+          renderProducts();
+          renderDrawer();
+        }
+      }
+
+      function clearList() {
+        cart = {};
+        saveCart();
+        updateBadges();
+        renderProducts();
+        renderDrawer();
+      }
+
+      function renderDrawer() {
+        const container = document.getElementById('drawer-items');
+        if (!container) return;
+
+        const d = I18N[lang];
+        const keys = Object.keys(cart).filter(function (k) {
+          return cart[k] && cart[k].qty > 0;
+        });
+
+        if (keys.length === 0) {
+          container.innerHTML =
+            '<div style="text-align:center;padding:48px 16px;color:var(--text-muted);font-size:14px;font-weight:700;">' +
+            esc(d.drawerEmpty) +
+            '</div>';
+          return;
+        }
+
+        container.innerHTML = keys
+          .map(function (id) {
+            const item = cart[id];
+            const title = lang === 'mr' ? item.nameMr : item.nameEn;
+            return (
+              '<div class="po-item-card">' +
+              '<div style="min-width:0;">' +
+              '<div style="font-size:14px;font-weight:800;color:var(--primary-deep);line-height:1.3;">' + esc(title) + '</div>' +
+              '<div style="font-size:11.5px;font-weight:700;color:var(--accent);margin-top:3px;">' + esc(d.rateLabel) + '</div>' +
+              '</div>' +
+              '<div class="po-qty-controls">' +
+              '<button type="button" class="po-step-btn" data-action="step" data-id="' + esc(id) + '" data-delta="-1" aria-label="Decrease">−</button>' +
+              '<input type="number" class="po-qty-input" min="1" value="' + item.qty + '" data-action="set-qty" data-id="' + esc(id) + '" aria-label="Lot Quantity" />' +
+              '<button type="button" class="po-step-btn" data-action="step" data-id="' + esc(id) + '" data-delta="1" aria-label="Increase">+</button>' +
+              '<button type="button" class="po-del-btn" data-action="remove" data-id="' + esc(id) + '" aria-label="Remove">✕</button>' +
+              '</div>' +
+              '</div>'
+            );
+          })
+          .join('');
+      }
+
+      function openDrawer() {
+        const drawer = document.getElementById('order-drawer');
+        const toast = document.getElementById('bottom-toast');
+        if (toast) toast.classList.add('hidden');
+        renderDrawer();
+        if (drawer) {
+          drawer.classList.remove('hidden');
+          document.body.classList.add('modal-open');
+        }
+      }
+
+      function closeDrawer() {
+        const drawer = document.getElementById('order-drawer');
+        if (drawer) {
+          drawer.classList.add('hidden');
+          document.body.classList.remove('modal-open');
+        }
+      }
+
+      function buildWhatsAppMessage() {
+        const keys = Object.keys(cart).filter(function (k) {
+          return cart[k] && cart[k].qty > 0;
+        });
+        if (keys.length === 0) return '';
+
+        const dealerName = (document.getElementById('po-dealer-name')?.value || '').trim();
+        const village = (document.getElementById('po-village')?.value || '').trim();
+        const gst = (document.getElementById('po-gst')?.value || '').trim();
+        const delivery = (document.getElementById('po-delivery')?.value || '').trim();
+
+        const lines = [
+          '*नमस्कार श्री साईनाथ कृषी भांडार (B2B होलसेल वितरण केंद्र)*',
+          '*B2B होलसेल ऑर्डर चौकशी (Purchase Order):*'
+        ];
+        if (dealerName) lines.push('*कृषी सेवा केंद्र / फर्म:* ' + dealerName);
+        if (village) lines.push('*गाव / तालुका / जिल्हा:* ' + village);
+        if (gst) lines.push('*GSTIN / परवाना क्र.:* ' + gst);
+        if (delivery) lines.push('*डिस्पॅच पद्धत:* ' + delivery);
+        lines.push('------------------------------');
+
+        keys.forEach(function (id, i) {
+          const item = cart[id];
+          lines.push(i + 1 + '. ' + item.nameEn + ' — *' + item.qty + ' लॉट/नग*');
+        });
+
+        lines.push('------------------------------');
+        lines.push('कृपया वरील उत्पादनांचे होलसेल व्यापारी दर व डिस्पॅच उपलब्धता कळवावी.');
+        return lines.join('\n');
+      }
+
+      function sendWhatsAppOrder() {
+        const msg = buildWhatsAppMessage();
+        if (!msg) return;
+
+        copyText(msg);
+        const waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg);
+        const win = window.open(waUrl, '_blank', 'noopener,noreferrer');
+        if (!win) window.location.href = waUrl;
+      }
+
+      function copyPoToClipboard() {
+        const msg = buildWhatsAppMessage();
+        if (!msg) return;
+        copyText(msg);
+        showToast(I18N[lang].toastCopied);
+      }
+
+      function sendOnboardingEnquiry() {
+        const firm = (document.getElementById('ob-firm')?.value || '').trim();
+        const owner = (document.getElementById('ob-owner')?.value || '').trim();
+        const loc = (document.getElementById('ob-location')?.value || '').trim();
+        const lic = (document.getElementById('ob-license')?.value || '').trim();
+        const req = (document.getElementById('ob-req')?.value || '').trim();
+
+        const lines = [
+          '*नमस्कार श्री साईनाथ कृषी भांडार (B2B होलसेल विभाग)*',
+          '*नवीन सब-डीलर / FPC होलसेल खाते व दरपत्रक चौकशी:*'
+        ];
+        if (firm) lines.push('*कृषी सेवा केंद्र / फर्म:* ' + firm);
+        if (owner) lines.push('*मालकाचे नाव व मोबाईल:* ' + owner);
+        if (loc) lines.push('*गाव / तालुका / जिल्हा:* ' + loc);
+        if (lic) lines.push('*GSTIN / परवाना क्र.:* ' + lic);
+        if (req) lines.push('*आवश्यक उत्पादने:* ' + req);
+        lines.push('कृपया B2B होलसेल दरपत्रक व अटी कळवाव्यात.');
+
+        const msg = lines.join('\n');
+        copyText(msg);
+        const waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg);
+        const win = window.open(waUrl, '_blank', 'noopener,noreferrer');
+        if (!win) window.location.href = waUrl;
+      }
+
+      // =====================================================================
+      // THEME, LANGUAGE & SAFE EVENT DELEGATION
+      // =====================================================================
+      function setTheme(nextTheme) {
+        theme = nextTheme;
+        document.documentElement.setAttribute('data-theme', theme);
+        setStorage(THEME_KEY, theme);
+
+        document.querySelectorAll('.theme-dot[data-theme-val]').forEach(function (dot) {
+          dot.classList.toggle('active', dot.getAttribute('data-theme-val') === theme);
+        });
+      }
+
+      function setLanguage(nextLang) {
+        lang = nextLang;
+        document.documentElement.setAttribute('lang', lang);
+        setStorage(LANG_KEY, lang);
+
+        const d = I18N[lang];
+        const langBtn = document.getElementById('lang-btn');
+        if (langBtn) langBtn.textContent = d.langToggle;
+
+        const searchEl = document.getElementById('search-input');
+        if (searchEl) searchEl.placeholder = d.searchPlaceholder;
+
+        const dealerEl = document.getElementById('po-dealer-name');
+        if (dealerEl) dealerEl.placeholder = d.dealerPlaceholder;
+
+        const villageEl = document.getElementById('po-village');
+        if (villageEl) villageEl.placeholder = d.villagePlaceholder;
+
+        const gstEl = document.getElementById('po-gst');
+        if (gstEl) gstEl.placeholder = d.gstPlaceholder;
+
+        const obFirm = document.getElementById('ob-firm');
+        if (obFirm) obFirm.placeholder = d.obFirmPlaceholder;
+
+        const obOwner = document.getElementById('ob-owner');
+        if (obOwner) obOwner.placeholder = d.obOwnerPlaceholder;
+
+        const obLoc = document.getElementById('ob-location');
+        if (obLoc) obLoc.placeholder = d.obLocPlaceholder;
+
+        const obLic = document.getElementById('ob-license');
+        if (obLic) obLic.placeholder = d.obLicPlaceholder;
+
+        const obReq = document.getElementById('ob-req');
+        if (obReq) obReq.placeholder = d.obReqPlaceholder;
+
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          const key = el.getAttribute('data-i18n');
+          if (!key || !d[key]) return;
+          if (key === 'heroTitle') {
+            el.innerHTML = d[key];
+          } else {
+            el.textContent = d[key];
+          }
+        });
+
+        updateSyncUI();
+        updateBadges();
+        renderProducts();
+        renderDrawer();
+      }
+
+      function bindEvents() {
+        document.addEventListener('click', function (e) {
+          const target = e.target.closest('[data-action]');
+          if (!target) return;
+
+          const action = target.getAttribute('data-action');
+          if (action === 'set-theme') {
+            const val = target.getAttribute('data-theme-val');
+            if (val) setTheme(val);
+          } else if (action === 'toggle-lang') {
+            setLanguage(lang === 'mr' ? 'en' : 'mr');
+          } else if (action === 'refresh-sheet') {
+            syncSheet();
+          } else if (action === 'filter-cat') {
+            const cat = target.getAttribute('data-cat') || 'all';
+            activeCategory = cat;
+            document.querySelectorAll('.filter-pill[data-cat]').forEach(function (btn) {
+              btn.classList.toggle('active', btn.getAttribute('data-cat') === cat);
+            });
+            renderProducts();
+          } else if (action === 'reset-filters') {
+            activeCategory = 'all';
+            searchQuery = '';
+            const searchEl = document.getElementById('search-input');
+            if (searchEl) searchEl.value = '';
+            document.querySelectorAll('.filter-pill[data-cat]').forEach(function (btn) {
+              btn.classList.toggle('active', btn.getAttribute('data-cat') === 'all');
+            });
+            renderProducts();
+          } else if (action === 'add') {
+            const id = target.getAttribute('data-id');
+            const qty = target.getAttribute('data-qty') || '1';
+            if (id) addItemSilent(id, qty);
+          } else if (action === 'step') {
+            const id = target.getAttribute('data-id');
+            const delta = parseInt(target.getAttribute('data-delta') || '0', 10);
+            if (id && delta) stepItem(id, delta);
+          } else if (action === 'remove') {
+            const id = target.getAttribute('data-id');
+            if (id) removeItem(id);
+          } else if (action === 'open-drawer' || action === 'toast-open') {
+            openDrawer();
+          } else if (action === 'close-drawer') {
+            closeDrawer();
+          } else if (action === 'backdrop-close') {
+            if (e.target === target) closeDrawer();
+          } else if (action === 'clear-list') {
+            clearList();
+          } else if (action === 'copy-po') {
+            copyPoToClipboard();
+          } else if (action === 'send-whatsapp') {
+            sendWhatsAppOrder();
+          } else if (action === 'send-onboarding') {
+            sendOnboardingEnquiry();
+          }
+        });
+
+        document.addEventListener('change', function (e) {
+          const target = e.target;
+          if (target && target.getAttribute('data-action') === 'set-qty') {
+            const id = target.getAttribute('data-id');
+            if (id) setItemQty(id, target.value);
+          }
+        });
+
+        const searchEl = document.getElementById('search-input');
+        if (searchEl) {
+          searchEl.addEventListener('input', function (e) {
+            searchQuery = e.target.value || '';
+            renderProducts();
+          });
+        }
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeDrawer();
+        });
+      }
+
+      try {
+        loadState();
+        setTheme(theme);
+        setLanguage(lang);
+        bindEvents();
+        syncSheet();
+      } catch (err) {
+        renderProducts();
+      }
+    })();
+  </script>
+</body>
+</html>
